@@ -2,6 +2,51 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: lightyellow;
+  background-color: rgb(245, 223, 153);
   padding: 1rem;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.my-books {
+  display: grid;
+  grid-template-columns: 1rem 8rem;
+  grid-template-areas:
+    "spine cover"
+    "footer footer";
+
+  /* gap: 15px; */
+}
+
+.my-books div {
+  border: 1px solid black;
+}
+
+.book-cover {
+  grid-area: cover;
+  height: 7rem;
+  background-color: lightgreen;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-family: helvetica;
+  font-size: 1.1rem;
+}
+
+.book-spine {
+  grid-area: spine;
+  border-top-left-radius: 8px;
+
+  background-color: gray;
+}
+
+.book-footer {
+  grid-area: footer;
+  height: 1rem;
+  border-bottom-left-radius: 8px;
+  background-color: lightgray;
 }

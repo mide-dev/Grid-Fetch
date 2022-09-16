@@ -1,6 +1,40 @@
 html,
 body {
-  margin: 0;
+  margin: 2rem;
   padding: 0;
   background-color: lightgreen;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(5, 20%);
+  height: 100vh;
+}
+
+.container * {
+  border: 1px solid magenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.jeopardy-title {
+  grid-row-start: 1;
+  background-color: skyblue;
+  font-weight: 600;
+}
+
+.clue1 {
+  grid-row-start: 2;
+}
+
+.clue2 {
+  grid-row-start: 3;
+}
+
+.clue3 {
+  grid-row-start: 4;
 }

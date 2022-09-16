@@ -18,6 +18,25 @@ async function getJeopardyData() {
   return data;
 }
 
+function getCategories(data) {
+  return `
+   
+        <div class= jeopardy-title>${data.title}</div>
+        <div class="jeopardy-clue clue1"> $100</div>
+        <div class='jeopardy-clue clue2'> $200</div>
+        <div class='jeopardy-clue clue3'> $300</div>
+        <div class='jeopardy-clue clue4'> $400</div>
+       
+`;
+}
+
 getJeopardyData().then((data) => {
+  document.body.innerHTML = `
+        <div class= container>
+            ${data.map(getCategories).join("")}
+            </div>
+    `;
+
+  //   data.map(i => );
   console.log(data);
 });
